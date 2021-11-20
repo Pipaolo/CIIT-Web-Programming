@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetMart</title>
+    <link rel="stylesheet" href="https://use.typekit.net/cvx1qml.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/tailwind.css" />
+    <script src="dist/jquery-3.6.0.min.js"></script>
+  </head>
+  <body class="flex flex-col w-full h-screen bg-apricot font-tisa-sans">
+    <!-- Overlay -->
+    <div
+      id="overlay"
+      class="absolute inset-0 z-10 invisible transition duration-300 bg-black  bg-opacity-30"
+    ></div>
+    <!-- Navigation Drawer -->
+    <nav id="drawer" class="w-64 -translate-x-full drawer"></nav>
+    <!-- AppBar -->
+    <nav
+      id="appbar"
+      class="flex flex-col items-center justify-center w-full p-4 space-y-4 shadow-sm  bg-melon"
+    >
+      <div class="flex w-full">
+        <!-- Hamburger Icon -->
+        <button id="menu-btn" class="icon-btn">
+          <img src="assets/icons/menu-icon.svg" class="w-10" />
+        </button>
+        <!-- Logo -->
+        <a
+          href="index.html"
+          aria-label="logo"
+          class="flex-1 text-3xl font-medium text-center cursor-pointer"
+        >
+          Pet<span class="font-bold"> Mart </span>
+        </a>
+      </div>
+    </nav>
+    <!-- Content -->
+    <div class="flex justify-center flex-1 p-4">
+      <div class="container flex flex-col"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="flex items-center justify-center h-32 p-4 text-black">
+      <p class="text-center">
+        <span class="font-bold">PetMart</span> &copy; 2020
+      </p>
+    </footer>
+    <!-- Insert Scripts -->
+    <script src="scripts/index.js"></script>
+  </body>
+</html>

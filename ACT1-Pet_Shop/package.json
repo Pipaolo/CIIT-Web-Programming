@@ -1,0 +1,16 @@
+{
+  "name": "act1-pet_shop",
+  "version": "1.0.0",
+  "description": "A very cool petshop",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paolo Matthew Tolentino",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.3.0",
+    "@tailwindcss/line-clamp": "^0.2.2",
+    "tailwindcss": "^2.2.19"
+  }
+}
