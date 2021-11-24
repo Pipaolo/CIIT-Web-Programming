@@ -3,9 +3,21 @@ const state = {
 };
 
 
+const drawerItems = [
+    {
+        name: 'Home',
+        route: 'index.html',
+    },
+    {
+        name: 'About Us',
+        route: 'index.html',
+    },
+];
+
 
 const menuButton = $('#menu-btn');
 const cartButton = $('#cart-btn');
+
 const navigationDrawer = $('#drawer');
 const overlay = $("#overlay");
 
@@ -33,6 +45,8 @@ menuButton.on('click', function () {
 cartButton.on('click', function () {
     window.location.href = "cart.html";
 });
+
+
 
 /**
  * Handle click on outside
@@ -64,12 +78,28 @@ function renderProductCard(index, product) {
     `;
 }
 
+function renderNavigationDrawerItem(item) {
+    return `
+    <a
+    href="${item.route}"
+    class="py-4 font-bold text-center text-white transition duration-300  hover:bg-old-lavender bg-none"
+  >
+    ${item.name}
+  </a>`;
+}
 
 
 /**
  * Start handling the on init method
  */
 $(function () {
+
+
+    for (let [index, route] of drawerItems.entries()) {
+        navigationDrawer.append(renderNavigationDrawerItem(route));
+    }
+
+
     for (let [index, product] of dogFoodProducts.entries()) {
         dogProductsContainer.append(renderProductCard(index, product));
     }
